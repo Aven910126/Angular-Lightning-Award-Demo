@@ -1,0 +1,5 @@
+<mat-grid-list cols="2" rowHeight="520px">
+    <mat-grid-tile *ngFor="let product of products">
+        <app-card [data] = "product"></app-card>
+    </mat-grid-tile>
+</mat-grid-list>

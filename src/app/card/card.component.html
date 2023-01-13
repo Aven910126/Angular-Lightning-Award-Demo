@@ -1,0 +1,23 @@
+<mat-card class="Demo-card">
+    <mat-card-header>
+        <mat-card-title>{{data.productName}}</mat-card-title>
+        <mat-card-subtitle>Lorem ipsum dolor sit amet.</mat-card-subtitle>
+    </mat-card-header>
+    <img src="{{data.img}}" class="card-img" alt="">
+    <mat-card-content>
+        {{data.producontent}}
+    </mat-card-content>
+    <mat-card-content>
+        <h6>Quantity:{{data.quantity}}</h6>
+    </mat-card-content>
+    <mat-card-actions>
+        <div *ngIf="data.quantity > 0; else btndisable">
+            <button mat-raised-button> 加入購物車 </button>
+            <button mat-raised-button color="primary"> 購買 </button>
+        </div>
+        <ng-template #btndisable>
+            <button mat-raised-button disabled> 加入購物車 </button>
+            <button mat-raised-button color="primary" disabled> 購買 </button>
+        </ng-template>
+    </mat-card-actions>
+</mat-card>
